@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poppins&family=Raleway&family=Space+Mono&family=Ubuntu:ital@1&display=swap" rel="stylesheet">
+<link rel="shortcut icon" href="./images/favicon-32x32.png" type="image/x-icon">
+<link rel="stylesheet" href="./SCSS/tipcalculator.css">
+<script src="./JS/app.js" defer></script>
+<title>Tip Calculator App</title>
+</head>
+<body>
+    <main>
+        <section>
+            <h1 class="sr-only">Tip calculator App</h1>
+            <figure class="header">
+                <img src="./images/logo.svg" alt="Logo">
+            </figure>
+            <div class="container">
+                <form>
+                    <div>
+                        <label for="bill">Bill</label>
+                        <input type="number" id="bill" placeholder="0">
+                    </div>
+                    <div class="tip">
+                        <label>Select Tip %</label>
+                        <button type="button" class="tipBtn">5%</button>
+                        <button type="button" class="tipBtn">10%</button>
+                        <button type="button" class="tipBtn">15%</button>
+                        <button type="button" class="tipBtn">25%</button>
+                        <button type="button" class="tipBtn">50%</button>
+                        <span class="custom_tip_container">
+                            <label for="custom_tip" class="custom_label">Custom</label>
+                            <input type="number" id="custom_tip">
+                        </span>
+                    </div>
+
+                    <div>
+                        <div class="nop_container">
+                            <label for="nop">Number of People</label>
+                            <span class="error_msg"></span>
+                        </div>
+                        <input type="number" id="nop" placeholder="0">
+                    </div>
+                </form>
+                <div class="output_container">
+                    <div class="tip_output">
+                        <div class="tipA_tipO"><h2>Tip Amount </h2><span>/ person</span></div>
+                        <h2 id="tipAmount">$00.0</h2>
+                    </div>
+                    <div class="tip_output">
+                        <div class="tipA_tipO"><h2>Total</h2><span>/ person</span></div>
+                        <h2 id="total">$00.0</h2>
+                    </div>
+                    <button id="resetBtn" class="disable_btn">reset</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+</body>
+</html>

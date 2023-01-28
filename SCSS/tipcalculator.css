@@ -1,0 +1,251 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(185deg, 41%, 84%);
+  height: 100%;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Space Mono", monospace;
+}
+main section {
+  width: 100%;
+  margin: 0 auto;
+}
+main section .header {
+  width: 70px;
+  text-transform: uppercase;
+  margin: 2rem auto 3rem auto;
+}
+main section .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  background-color: hsl(0deg, 0%, 100%);
+  border-radius: 15px;
+}
+main section .container form {
+  flex-basis: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  padding: 0 10px;
+}
+main section .container form div {
+  margin: 20px auto;
+  width: 100%;
+}
+main section .container form div label {
+  flex-basis: 100%;
+  font-size: 0.9rem;
+  padding: 0 0 8px 0;
+  font-weight: 600;
+  color: hsl(183deg, 100%, 15%);
+}
+main section .container form div input {
+  width: 100%;
+  padding: 10px;
+  color: hsl(183deg, 100%, 15%);
+  border: 2px solid transparent;
+  background-color: hsl(189deg, 41%, 97%);
+  border-radius: 4px;
+  text-align: right;
+  font-size: 1rem;
+  font-weight: 550;
+  outline: none;
+  background-repeat: no-repeat;
+  background-size: 11px 11px;
+  background-position: 3% 50%;
+}
+main section .container form div input:focus, main section .container form div input:active, main section .container form div input:hover {
+  border: 2px solid hsl(172deg, 67%, 45%);
+}
+main section .container form div input::-webkit-outer-spin-button, main section .container form div input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+main section .container form div .nop_container {
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+main section .container form div .nop_container label {
+  display: block;
+}
+main section .container form div .nop_container span {
+  color: rgb(255, 0, 0);
+  flex-basis: 30%;
+  font-size: 0.8rem;
+}
+main section .container form div #bill {
+  background-image: url("../images/icon-dollar.svg");
+}
+main section .container form div #nop {
+  background-image: url("../images/icon-person.svg");
+}
+main section .container form .tip {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  width: 100%;
+  gap: 3%;
+}
+main section .container form .tip .tipBtn {
+  display: inline-block;
+  flex-basis: 48%;
+  height: 40px;
+  background-color: hsl(183deg, 100%, 15%);
+  border-radius: 5px;
+  border: none;
+  color: hsl(0deg, 0%, 100%);
+  margin: 5px 0;
+  font-size: 1.1rem;
+  font-weight: 550;
+  padding: 3px;
+  cursor: pointer;
+}
+main section .container form .tip .tipBtn:hover {
+  background-color: hsl(172deg, 67%, 45%);
+  color: hsl(0deg, 0%, 100%);
+}
+main section .container form .tip .tipBtn:active {
+  background-color: hsl(172deg, 67%, 45%);
+  color: hsl(183deg, 100%, 15%);
+}
+main section .container form .tip .custom_tip_container {
+  display: inline;
+  flex-basis: 48%;
+  position: relative;
+}
+main section .container form .tip .custom_tip_container label {
+  position: absolute;
+  left: 25%;
+  top: 20%;
+  font-size: 1.3rem;
+}
+main section .container form .tip .custom_tip_container #custom_tip {
+  padding: 8px;
+}
+main section .container .output_container {
+  flex-basis: 100%;
+  background-color: hsl(183deg, 100%, 15%);
+  min-height: 320px;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 5px;
+}
+main section .container .output_container .tip_output {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  margin: 30px 0;
+}
+main section .container .output_container .tip_output .tipA_tipO {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: row wrap;
+}
+main section .container .output_container .tip_output .tipA_tipO h2 {
+  flex-basis: 100%;
+  font-size: 1rem;
+  color: hsl(0deg, 0%, 100%);
+}
+main section .container .output_container .tip_output .tipA_tipO span {
+  display: block;
+  font-size: 0.7rem;
+  color: hsl(186deg, 14%, 43%);
+}
+main section .container .output_container .tip_output h2 {
+  font-size: 2rem;
+  color: hsl(172deg, 67%, 45%);
+}
+main section .container .output_container button {
+  margin-top: 110px;
+  margin-bottom: 0;
+  height: 40px;
+  width: 100%;
+  background-color: hsl(172deg, 67%, 45%);
+  color: hsl(183deg, 100%, 15%);
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  text-transform: uppercase;
+  font-weight: 550;
+}
+main section .container .output_container button:active {
+  background-color: hsl(172deg, 67%, 45%);
+  color: hsl(183deg, 100%, 15%);
+}
+
+.disable_btn {
+  pointer-events: none;
+  opacity: 0.3;
+}
+
+.red_border {
+  border: 2px solid red;
+}
+
+@media (min-width: 800px) {
+  main {
+    height: 90vh;
+    width: 100%;
+    margin: 0 auto;
+  }
+  main section {
+    width: 70%;
+    margin: 0 auto;
+  }
+  main section .container {
+    height: 450px;
+  }
+  main section .container form {
+    flex-basis: 45%;
+    margin: 0 5px;
+    height: 450px;
+  }
+  main section .container form .tip .tipBtn {
+    flex-basis: 30%;
+    cursor: pointer;
+  }
+  main section .container form .tip .tipBtn:hover {
+    background-color: hsl(172deg, 67%, 45%);
+    color: hsl(0deg, 0%, 100%);
+  }
+  main section .container form .tip .tipBtn:active {
+    background-color: hsl(172deg, 67%, 45%);
+    color: hsl(183deg, 100%, 15%);
+  }
+  main section .container form .tip .custom_tip_container {
+    flex-basis: 30%;
+  }
+  main section .container .output_container {
+    height: 390px;
+    flex-basis: 47%;
+    margin-left: 25px;
+  }
+}/*# sourceMappingURL=tipcalculator.css.map */

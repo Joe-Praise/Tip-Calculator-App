@@ -1,0 +1,23 @@
+@mixin input-l(){
+    width: 100%;
+    padding: 10px;
+    color: $color2;
+    border: 2px solid transparent;
+    background-color: $color6;
+    border-radius: 4px;
+    text-align: right;
+    font-size:1rem;
+    font-weight: 550;
+    outline: none;
+    background-repeat: no-repeat;
+    background-size: 11px 11px;
+    background-position: 3% 50%;
+
+    &:focus,&:active,&:hover{
+        border: 2px solid $color1;
+    }
+    &::-webkit-outer-spin-button,&::-webkit-inner-spin-button{
+        -webkit-appearance: none;
+        margin: 0;
+    }
+}

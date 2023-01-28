@@ -1,0 +1,229 @@
+@import "./variables.scss";
+@import "./reset.scss";
+@import "./mixin.scss";
+
+.sr-only{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Space Mono', monospace;
+    section{
+        width:100%;
+        margin: 0 auto;
+        .header{
+            width: 70px;
+            text-transform: uppercase;
+            margin: 2rem auto 3rem auto;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-flow: row wrap;
+            background-color: $color7;
+            border-radius: 15px;
+            form{
+                flex-basis: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-flow: column;
+                padding:0 10px;
+                div{
+                    margin: 20px auto;
+                    width: 100%;
+                    // background-color: green;
+                    label{
+                        flex-basis: 100%;
+                        font-size: 0.9rem;
+                        padding: 0 0 8px 0;
+                        font-weight: 600;
+                        color: $color2;
+                    }
+                    input{
+                        @include input-l;
+                    }
+                    .nop_container{
+                        margin: 0;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        width: 100%;
+                        label{
+                            display: block;
+                        }
+                        span{
+                            color: rgb(255, 0, 0);
+                            flex-basis: 30%;
+                            font-size: 0.8rem;
+                        }
+                    }
+                    #bill{
+                        background-image: url("../images/icon-dollar.svg");
+                    }
+                    #nop{
+                        background-image: url("../images/icon-person.svg");
+                    }
+                }
+                .tip{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-flow: row wrap;
+                    width: 100%;
+                    gap: 3%;
+                    .tipBtn{
+                        display: inline-block;
+                        flex-basis: 48%;
+                        height: 40px;
+                        background-color: $color2;
+                        border-radius: 5px;
+                        border: none;
+                        color: $color7;
+                        margin: 5px 0;
+                        font-size: 1.1rem;
+                        font-weight: 550;
+                        padding: 3px;
+                        cursor: pointer;
+                        &:hover{
+                            background-color: $color1;
+                            color: $color7;
+                        }
+                        &:active{
+                            background-color: $color1;
+                            color: $color2;
+                        }
+                    }
+                    .custom_tip_container{
+                        display: inline;
+                        flex-basis: 48%;
+                        position: relative;
+                        label{
+                            position: absolute;
+                            left: 25%;
+                            top: 20%;
+                            font-size: 1.3rem;
+                        }
+                        #custom_tip{
+                            padding: 8px;
+                        }
+                    }
+                }
+            }
+            .output_container{
+                flex-basis: 100%;
+                background-color: $color2;
+                min-height:320px ;
+                padding: 20px;
+                border-radius: 10px;
+                margin: 5px;
+                .tip_output{
+                    display: flex;
+                    justify-content: space-between;
+                    align-content: center;
+                    margin: 30px 0;
+                    .tipA_tipO{
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        flex-flow: row wrap;
+                        h2{
+                            flex-basis: 100%;
+                            font-size: 1rem;
+                            color: $color7;
+                        }
+                        span{
+                            display: block;
+                            font-size: 0.7rem;
+                            color: $color3;
+                        }
+                    }
+                    h2{
+                        font-size: 2rem;
+                        color: $color1;
+                    }
+                }
+
+                button{
+                    margin-top: 110px;
+                    margin-bottom: 0;
+                    height: 40px;
+                    width: 100%;
+                    background-color: $color1;
+                    color: $color2;
+                    border-radius: 5px;
+                    outline: none;
+                    border: none;
+                    text-transform: uppercase;
+                    font-weight: 550;
+                    &:active{
+                        background-color: $color1;
+                        color: $color2;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.disable_btn{
+    pointer-events: none;
+    opacity: 0.3;
+}
+.red_border{
+    border: 2px solid red;
+}
+
+@media (min-width:800px){
+    main{
+    height: 90vh;
+    width:100%;
+    margin: 0 auto;
+    section{
+        width:70%;
+        margin: 0 auto;
+        .container{
+            height: 450px;
+            form{
+                flex-basis: 45%;
+                margin: 0 5px;
+                height: 450px;
+                // background-color: red;
+                .tip{
+                    .tipBtn{
+                        flex-basis: 30%;
+                        cursor: pointer;
+                        &:hover{
+                            background-color: $color1;
+                            color: $color7;
+                        }
+                        &:active{
+                            background-color: $color1;
+                            color: $color2;
+                        }
+                    }
+                    .custom_tip_container{
+                        flex-basis: 30%;
+                    }
+                }
+            }
+            .output_container{
+                height: 390px;
+                flex-basis: 47%;
+                margin-left:25px;
+            }
+        }
+    }
+}
+}
